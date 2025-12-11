@@ -28,4 +28,4 @@ jobs:
           run: pip install pytest pytest-spec pytest-describe
 
         - name: run pytest
-          run: pytest --spec test_crhistmas_list.py
+          run: pytest --spec test_christmas_list.py
