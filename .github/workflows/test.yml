@@ -6,13 +6,25 @@ on:
       - main
 
 jobs:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+    run-brute:
+      runs-on: ubuntu-latest
+      steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: install pytest
-      run: pip install pytest pytest-spec pytest-describe
+      - name: install pytest
+        run: pip install pytest pytest-spec pytest-describe
 
-    - name: run pytest
-      run: pytest --spec
+      - name: run pytest
+        run: pytest --spec
+    
+    run-christmas:
+     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: install pytest
+        run: pip install pytest pytest-spec pytest-describe
+
+      - name: run pytest
+        run: pytest --spec
